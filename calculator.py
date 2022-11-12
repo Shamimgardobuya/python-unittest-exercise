@@ -1,21 +1,28 @@
 class Calculator:
     """ A simple calculator App"""
-
-    def add(x, y):
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+        
+    def add(self):
         """Add Function"""
-        return x + y
+        return self.x + self.y
 
-    def subtract(x, y):
+    def subtract(self):
         """Subtract Function"""
-        return x - y
+        return self.x - self.y
 
-    def multiply(x, y):
+    def multiply(self):
         """Multiply Function"""
-        return x * y
+        return self.x * self.y
 
-    def divide(x, y):
+    def divide(self):
         """Divide Function"""
-        if y == 0:
+        if self.y == 0:
             raise ValueError('Can not divide by zero!')
 
-        return x / y
+        return self.x / self.y
+mycalc=Calculator(6.0,8)
+print(mycalc.add())
+print(mycalc.subtract())
+print(mycalc.divide())
